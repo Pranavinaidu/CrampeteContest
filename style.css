@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    background-color:#C0C0C0;
+}
+.rowOne{
+    display: flex;
+    flex-direction: row;
+}
+ .image{
+    flex:1;
+    padding: 20px 20px 0px 120px;
+} 
+.image img{
+    width:145px;
+    height:150px;
+    border-radius:50%;
+}
+.selfIntro{
+    flex:1;
+    text-align:right;
+    padding:20px 120px 0px 20px;
+}
+.selfIntro p{
+    font-size:22px;
+}
+.selfIntro h2{
+    padding-bottom: 10px;
+}
+.selfIntro button{
+    border:none;
+    background-color:rgb(19, 180, 230);
+    color:white;
+    padding:7px 7px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:5px 5px;
+    margin: 0px 8px;
+}
+nav{
+    padding:10px 0px;
+    border-radius: 5px;
+    background-color: grey;
+    width:-moz-fit-content;
+    width:fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.rowTwo{ 
+    padding: 20px 0;
+}
+main{
+    background-color: rgb(238, 236, 236);
+}
+.heading{
+    text-align: center;
+    padding: 25px 0px;
+    font-weight: normal;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    column-gap: 20px;
+    row-gap: 40px;
+    margin: 0px 70px;
+}
+.project img{
+    width:100%;
+    height:300px;
+}
+.title{
+    font-size: x-large;
+    margin-top: 15px;
+}
+.description{
+    margin: 10px 0;
+}
+.about{
+    margin-top: 40px;
+    background-color:#C0C0C0;
+    height: 385px;
+}
+.details{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    justify-content: center;
+    column-gap:30px;
+    margin-top: 10px;
+    line-height: 25px;
+}
+.personalDetails{
+    background-color: white;
+    padding:25px 25px;
+}
+.personalDetails ul{
+    padding:15px 35px;
+    font-size: 15px;
+}
+.education{
+    background-color:#404040;
+    color: white;
+    padding:25px 25px;
+}
+.education ul{
+    padding:15px 35px;
+    font-size: 15px;
+}
+.subHeading{
+font-size: larger;
+text-align: center;
+}
+footer{
+    height: 80px;
+    background-color: rgb(238, 236, 236);
+}
+footer p{
+    text-align: center;
+    padding-top: 25px;
+}
+/*Device width which is under or equal to 576px */
+@media(max-width:576px){
+    .rowOne{
+        display: flex;
+        flex-direction: column;
+     }
+    .image{
+        display:flex;
+        justify-content: center;
+        padding: 10px 0;
+    } 
+    .selfIntro{
+        flex:0;
+        text-align:center;
+        padding:5px;
+    }
+    .projects{
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(6,auto);
+        column-gap:0px;
+        row-gap: 40px;
+        margin: 0px 50px;
+    }
+    .project img{
+        width:100%;
+        height:300px;
+    }
+    .about{
+        height: auto;
+    }
+    .details{
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(2,auto);
+        row-gap:30px;
+        line-height: 21px;
+        padding-bottom: 30px;
+    }
+    footer{
+        height: 60px;
+    }    
+}
+/*Device width from 577px to 768px */
+@media(min-width:577px) and (max-width:768px){
+    .image{
+        padding: 20px 20px 0px 50px;
+    } 
+    .selfIntro{
+        padding:20px 50px 0px 20px;
+    }
+    .rowTwo{ 
+        padding: 20px 0;
+    }
+    .projects{
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
+        margin: 0px 50px;
+    }
+    .details{
+        grid-template-columns: repeat(2,auto);
+        column-gap:20px;
+    }
+    .personalDetails{
+        padding:25px 45px 25px 25px;
+    }
+    footer{
+        height: 70px;
+    }
+}
+/*Device width from 769px to 992px */
+@media(min-width:769px) and (max-width:992px){
+    .image{
+        padding: 20px 20px 0px 60px;
+    } 
+    .selfIntro{
+        padding:20px 60px 0px 20px;
+    }
+    .details{
+        grid-template-columns: repeat(2,300px);
+        column-gap:40px;
+    }
+}
+/*Device width from 993px to 1200px */
+@media(min-width:993px) and (max-width:1200px){
+    .details{
+        grid-template-columns: repeat(2,450px);
+    }
+}
